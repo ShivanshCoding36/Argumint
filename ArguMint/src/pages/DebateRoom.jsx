@@ -107,7 +107,7 @@ export default function DebateRoom() {
         const interest = data?.interests?.[0] || 'Technology';
 
         try {
-          const res = await fetch('http://localhost:3000/api/generate-topic', {
+          const res = await fetch('https://argumint.onrender.com/api/generate-topic', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ interest })
@@ -131,7 +131,7 @@ export default function DebateRoom() {
 
   useEffect(() => {
     if (isTranscribing) {
-      eventSourceRef.current = new EventSource('http://localhost:3000/api/stream-transcribe/events');
+      eventSourceRef.current = new EventSource('https://argumint.onrender.com/api/stream-transcribe/events');
       eventSourceRef.current.onmessage = e => {
         if (e.data) {
           setInput(prev => (prev ? prev + ' ' : '') + e.data);
@@ -165,7 +165,7 @@ export default function DebateRoom() {
 
     if (isTranscribing) {
       setIsTranscribing(false);
-      fetch('http://localhost:3000/api/stream-transcribe/stop');
+      fetch('https://argumint.onrender.com/api/stream-transcribe/stop');
     }
 
     const newUserTurn = { user: input.trim() };
@@ -176,7 +176,7 @@ export default function DebateRoom() {
     const currentHistory = [...rounds, newUserTurn];
 
     try {
-      const res = await fetch('http://localhost:3000/api/ai-response', {
+      const res = await fetch('https://argumint.onrender.com/api/ai-response', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -201,7 +201,7 @@ export default function DebateRoom() {
         const userText = updatedRounds.map(h => h.user).join('\n');
         const aiText = updatedRounds.map(h => h.ai).filter(Boolean).join('\n');
 
-        const judgeRes = await fetch('http://localhost:3000/api/judge', {
+        const judgeRes = await fetch('https://argumint.onrender.com/api/judge', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ debaterA: userText, debaterB: aiText ,topic: topic})
@@ -241,7 +241,7 @@ export default function DebateRoom() {
   const handleMicClick = async () => {
     if (!isTranscribing) {
       try {
-        const response = await fetch('http://localhost:3000/api/stream-transcribe/start');
+        const response = await fetch('https://argumint.onrender.com/api/stream-transcribe/start');
         if (response.ok) {
           setIsTranscribing(true);
           console.log('Transcription started.');
@@ -253,7 +253,7 @@ export default function DebateRoom() {
       }
     } else {
       try {
-        const response = await fetch('http://localhost:3000/api/stream-transcribe/stop');
+        const response = await fetch('https://argumint.onrender.com/api/stream-transcribe/stop');
         if (response.ok) {
           setIsTranscribing(false);
           console.log('Transcription stopped.');
