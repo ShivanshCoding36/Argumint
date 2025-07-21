@@ -201,7 +201,7 @@ export default function HumanDebateRoom() {
 
         const interest = profileData?.interests?.[0] || 'Technology';
         try {
-          const res = await fetch('http://localhost:3000/api/generate-topic', {
+          const res = await fetch('https://argumint.onrender.com/api/generate-topic', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ interest })
@@ -420,7 +420,7 @@ export default function HumanDebateRoom() {
   // Effect for handling real-time transcription via EventSource
   useEffect(() => {
     if (isTranscribing) {
-      eventSourceRef.current = new EventSource('http://localhost:3000/api/stream-transcribe/events');
+      eventSourceRef.current = new EventSource('https://argumint.onrender.com/api/stream-transcribe/events');
       eventSourceRef.current.onmessage = e => {
         if (e.data) {
           setInput(prev => (prev ? prev + ' ' : '') + e.data);
@@ -471,7 +471,7 @@ export default function HumanDebateRoom() {
       setInput('');
       if (isTranscribing) {
         setIsTranscribing(false);
-        fetch('http://localhost:3000/api/stream-transcribe/stop');
+        fetch('https://argumint.onrender.com/api/stream-transcribe/stop');
       }
     } else {
       console.error("Send failed:", error);
@@ -488,7 +488,7 @@ export default function HumanDebateRoom() {
   const handleMicClick = async () => {
     if (!isTranscribing) {
       try {
-        const response = await fetch('http://localhost:3000/api/stream-transcribe/start');
+        const response = await fetch('https://argumint.onrender.com/api/stream-transcribe/start');
         if (response.ok) {
           setIsTranscribing(true);
           console.log('Transcription started.');
@@ -500,7 +500,7 @@ export default function HumanDebateRoom() {
       }
     } else {
       try {
-        const response = await fetch('http://localhost:3000/api/stream-transcribe/stop');
+        const response = await fetch('https://argumint.onrender.com/api/stream-transcribe/stop');
         if (response.ok) {
           setIsTranscribing(false);
           console.log('Transcription stopped.');
