@@ -67,7 +67,12 @@ export default function Profile() {
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gradient-to-br from-slate-950 via-cyan-950 to-slate-900 text-white p-6">
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="min-h-screen w-full bg-gradient-to-br from-slate-950 via-cyan-950 to-slate-900 flex items-center justify-center px-6 py-16"
+    >
       <h1 className="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-300">
         Your Profile
       </h1>
@@ -137,5 +142,6 @@ export default function Profile() {
         })}
       </div>
     </div>
+    </motion.div>
   );
 }
