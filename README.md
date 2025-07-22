@@ -72,7 +72,7 @@ Welcome to **Argumint** – a platform built to simulate real-world debate exper
 
 ---
 
-## 🧪 Try It Out=
+## 🧪 Try It Out
 
 - 🔗 [Frontend (Vercel)](https://argumint.vercel.app)
 
