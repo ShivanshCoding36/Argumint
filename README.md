@@ -86,9 +86,9 @@ Welcome to **Argumint** – a platform built to simulate real-world debate exper
 |-----------------------------------|----------|------------------------------------------------|
 | Live Turn-Based Debate            | ✅        | Alternating turns enforced by role & state     |
 | AI Evaluation and Feedback        | ✅        | Gemini model rates score & gives feedback |
-| Adjustable AI Difficulty          | ✅        | Beginner / Intermediate / Advanced AI modes    |
-| Audio Transcription               | ✅        | AssemblyAI live stream transcription           |
-| Rebuttal-Based Format             | ✅        | Each user responds in rounds (min 3)           |
+| Adjustable AI Difficulty          | ✅        | Beginner / Intermediate / Advanced AI modes.   |
+| Audio Transcription               | ✅        | AssemblyAI live stream transcription.          |
+| Rebuttal-Based Format             | ✅        | Each user responds in rounds                   |
 | Human ↔ Human Debate Option       | ✅        | Shareable room link with role assignment       |
 | Topic Relevance                   | ✅        | Topics based on user interests (from profile)  |
 
