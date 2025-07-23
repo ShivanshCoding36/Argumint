@@ -67,18 +67,19 @@ export default function Profile() {
     }
   };
 
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="min-h-screen w-full bg-gradient-to-br from-slate-950 via-cyan-950 to-slate-900 flex items-center justify-center px-6 py-16"
-    >
+ return (
+  <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+    className="min-h-screen w-full bg-gradient-to-br from-slate-950 via-cyan-950 to-slate-900 flex items-center justify-center px-6 py-16"
+  >
+    <div className="flex flex-col items-center text-center w-full max-w-3xl">
       <h1 className="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-300">
         Your Profile
       </h1>
 
-      <div className="bg-white/10 p-6 rounded-xl border border-white/20 mb-10 max-w-xl">
+      <div className="bg-white/10 p-6 rounded-xl border border-white/20 mb-10 w-full">
         {editing ? (
           <>
             <input
@@ -123,7 +124,7 @@ export default function Profile() {
       </div>
 
       <h2 className="text-2xl font-bold mb-4 text-cyan-300">Your Debate History</h2>
-      <div className="space-y-4">
+      <div className="space-y-4 w-full">
         {debates.map((d, i) => {
           const isWinner = d.winner === user.id;
           const opponentId = d.user_id_a === user.id ? d.user_id_b : d.user_id_a;
@@ -142,6 +143,8 @@ export default function Profile() {
           );
         })}
       </div>
-    </motion.div>
-  );
+    </div>
+  </motion.div>
+);
+
 }
