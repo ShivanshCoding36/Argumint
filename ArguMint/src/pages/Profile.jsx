@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function Profile() {
   const [debates, setDebates] = useState([]);
@@ -141,7 +142,6 @@ export default function Profile() {
           );
         })}
       </div>
-    </div>
     </motion.div>
   );
 }
