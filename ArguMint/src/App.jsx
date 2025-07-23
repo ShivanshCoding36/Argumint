@@ -18,6 +18,7 @@ import TopicGenerator from './pages/TopicGenerator';
 import RealtimeTestComponent from './pages/testMessaging';
 import WhisperUploader from './components/WhisperUploader';
 import AssemblyTest from './pages/test_assembly';
+import Footer from '../components/Footer';
 
 export default function App() {
   return (
@@ -40,6 +41,8 @@ export default function App() {
       <Route path="/test" element={<WhisperUploader />} />
       <Route path="/test2" element={<AssemblyTest />} />
       <Route path="*" element={<NotFound />} />
-    </Routes></>
+    </Routes>
+    <Footer />
+    </>
   );
 }
