@@ -321,7 +321,7 @@ export default function HumanDebateRoom() {
             const debaterA_name = currentUserNameMap.current[debaterA_id] || 'Debater A';
             const debaterB_name = currentUserNameMap.current[debaterB_id] || 'Debater B';
 
-            fetch('http://localhost:3000/api/judge', {
+            fetch('https://argumint.onrender.com/api/judge', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
