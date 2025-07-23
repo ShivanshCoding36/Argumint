@@ -65,8 +65,9 @@ export default function HumanDebateRoom() {
             loudness: 0.9,
             speech_sample_rate: 22050,
             enable_preprocessing: true,
-            model: "bulbul:v2"
+            model: "bulbul"
         });
+        console.log("Full Sarvam Response:", response);
 
         if (response && response.audio_content) {
             // Decode the base64 audio content
