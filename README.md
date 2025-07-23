@@ -21,7 +21,7 @@ Welcome to **Argumint** – a platform built to simulate real-world debate exper
   - 🤖 **AI Opponent** (Beginner, Intermediate, Advanced)
   - 👤 **Human Opponent** (via link)
 - Structured debate:
-  - 3 to 5 rounds
+  - 1 to 5 rounds
   - Turn-based message control
   - **Live transcription** using **AssemblyAI**
 
