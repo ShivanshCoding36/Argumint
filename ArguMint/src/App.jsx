@@ -18,7 +18,7 @@ import TopicGenerator from './pages/TopicGenerator';
 import RealtimeTestComponent from './pages/testMessaging';
 import WhisperUploader from './components/WhisperUploader';
 import AssemblyTest from './pages/test_assembly';
-import Footer from '../components/Footer';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
