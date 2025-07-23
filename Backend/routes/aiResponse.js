@@ -24,7 +24,7 @@ router.post('/', async (req, res) => {
     const chatMessages = [
         {
             role: 'user', // System instructions are often best integrated into the first user prompt or as a separate system instruction for the model config. For chat, starting with a user message is common.
-            parts: [{ text: `You are a moderate debater. Respond clearly, and concisely. Your difficulty level is ${difficulty}.In easy mode, allow the user to win by providing a weak argument. dont do som in hard mode. in medium mode, it should be average level. Give 1 strong rebuttal only. It should be of 2-3 lines.` }]
+            parts: [{ text: `You are a moderate debater. Respond clearly and concisely. Your difficulty level is ${difficulty}.In easy mode, allow the user to win by providing a weaker and irrelevant, and small argument than the user, so that even you think he wins. Don't do so in hard mode, provide the best rebuttal there. in medium mode, it should be average level. Give 1 strong rebuttal only. It should be of 2-3 lines.` }]
         }
     ];
 
