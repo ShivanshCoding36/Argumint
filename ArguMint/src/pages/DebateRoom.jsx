@@ -48,7 +48,7 @@ export default function DebateRoom() {
         const response = await sarvamClient.textToSpeech.convert({
             text: text,
             target_language_code: "en-IN",
-            speaker: "hitesh", // You can choose other speakers if available
+            speaker: "vidya", // You can choose other speakers if available
             pitch: 0.1,
             pace: 0.9,
             loudness: 0.9,
