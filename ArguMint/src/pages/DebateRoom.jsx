@@ -96,6 +96,7 @@ export default function DebateRoom() {
 
       if (savedTopic) {
         setTopic(savedTopic);
+        sessionStorage.setItem('currentTopic', '');
         setLoading(false);
       } else {
         const { data } = await supabase
