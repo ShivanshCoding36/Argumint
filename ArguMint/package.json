@@ -17,6 +17,8 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.50.0",
     "assemblyai": "^4.13.3",
+    "audiobuffer-to-wav": "^1.0.0",
+    "axios": "^1.11.0",
     "framer-motion": "^11.2.11",
     "lodash": "^4.17.21",
     "node-record-lpcm16": "^1.0.1",
@@ -24,6 +26,7 @@
     "react-dom": "^18.3.1",
     "react-icons": "^5.5.0",
     "react-router-dom": "^6.23.1",
+    "sarvam-ai-provider": "^1.0.2",
     "sarvamai": "^0.1.6-a6",
     "stream": "^0.0.3",
     "uuid": "^11.1.0"
