@@ -164,6 +164,7 @@ export default function HumanDebateRoom() {
         if (savedTopic) {
           // 2. Found in Session Storage, use it and persist to DB
           topicFetched = savedTopic;
+            sessionStorage.setItem('currentTopic', '');
           try {
             const { error: insertError } = await supabase
               .from('rooms')
