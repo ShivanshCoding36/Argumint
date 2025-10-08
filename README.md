@@ -95,7 +95,7 @@ Welcome to **Argumint** – a platform built to simulate real-world debate exper
 ---
 ## 🎥 Demo Video
 
-> 🔗 [Watch the full demo]-> To be uploaded
+> 🔗 [Watch the full demo]-> [Argumint](https://youtu.be/v5ixB11TAeo)
 
 ---
 
