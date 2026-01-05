@@ -6,7 +6,7 @@ dotenv.config();
 const router = express.Router();
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const AI_RESPONSE_MODEL = 'gemini-2.0-flash'; // Using the latest Flash model
+const AI_RESPONSE_MODEL = 'gemini-2.5-flash'; // Using the latest Flash model
 function getRandomFloat(min, max) {
     return Math.random() * (max - min) + min;
 }
@@ -60,3 +60,4 @@ router.post('/', async (req, res) => {
 });
 
 export default router;
+
