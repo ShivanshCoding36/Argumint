@@ -6,7 +6,7 @@ dotenv.config();
 const router = express.Router();
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const JUDGING_MODEL = 'gemini-2.0-flash'; // Using the latest Flash model
+const JUDGING_MODEL = 'gemini-2.5-flash'; // Using the latest Flash model
 
 router.post('/', async (req, res) => {
     const { debaterA, debaterB, topic, nameA, nameB } = req.body;
@@ -65,5 +65,6 @@ Please respond in the following JSON format:
         res.status(500).json({ error: 'Judging failed', details: err.message || 'Unknown error' });
     }
 });
+
 
 export default router;
