@@ -8,7 +8,7 @@ const router = express.Router();
 
 // Initialize Google Generative AI
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const TOPIC_GENERATION_MODEL = 'gemini-2.0-flash';
+const TOPIC_GENERATION_MODEL = 'gemini-2.5-flash-lite';
 
 console.log(`Using GEMINI_API_KEY: ${process.env.GEMINI_API_KEY ? 'Loaded' : 'Not Loaded'}`);
 
@@ -63,4 +63,5 @@ router.post('/', async (req, res) => {
 });
 
 export default router;
+
 
