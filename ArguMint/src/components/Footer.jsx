@@ -48,7 +48,7 @@ const Footer = () => {
       </div>
 
       <div className="mt-10 text-center text-xs text-slate-400">
-        © 2025 ArguMint. All rights reserved.
+        &copy; {new Date().getFullYear()}. All rights reserved.
       </div>
     </footer>
   );
